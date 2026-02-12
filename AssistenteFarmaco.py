@@ -3,7 +3,7 @@ import streamlit as st
 from groq import Groq
 
 st.set_page_config(
-    page_title="Henrique Farmaco Assistant",
+    page_title="Juniper Assistant",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -28,7 +28,7 @@ with st.sidebar:
     
     st.title("Assistente de Farmacia")
 
-    st.markdown("Assistente de Farmacia para consulta")
+    st.markdown("Uma chave de API groq é necessaria para utilizar o assistente")
     
     groq_api_key = st.text_input(
         "Insert your api Key", 
@@ -37,13 +37,13 @@ with st.sidebar:
     )
 
     st.markdown("---")
-    st.markdown("Me ajude com...")
+    st.markdown("Duvidas: Se estiver com duvidas de como utilizar o assistente, acesse o site Groq, crie uma conta, na direita na aba Developer havera a opcao, 'Free API Key' gere sua chave e insira no campo acima")
 
     st.markdown("---")
 
 st.title("Este assistene te auxilia a obter informação sobre tudo relacionado a Farmacia")
 
-st.title("Ola eu sou o Groqx, como posso te ajudar hoje?")
+st.title("Juniper Auxilia")
 
 st.caption("Tire Sua Duvida")
 
@@ -72,10 +72,10 @@ elif st.session_state.messages:
      st.warning("Please insert your Groq key")
 
 
-if prompt := st.chat_input("insert questions"):
+if prompt := st.chat_input("Pergunte Aqui"):
     
     if not client:
-        st.warning("Set your Grot API key to Start")
+        st.warning("Selecione uma chave API groq para iniciar")
         st.stop()
 
     st.session_state.messages.append({"role": "user", "content": prompt})
