@@ -31,7 +31,7 @@ with st.sidebar:
     st.markdown("Uma chave de API Groq é necessaria para utilizar o assistente")
     
     groq_api_key = st.text_input(
-        "Insert your api Key", 
+        "Insira sua chave de API", 
         type="password",
         help="Obtenha sua chave em https://console.groq.com/keys"
     )
