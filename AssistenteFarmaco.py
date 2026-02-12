@@ -28,7 +28,7 @@ with st.sidebar:
     
     st.title("Assistente de Farmacia")
 
-    st.markdown("Uma chave de API groq é necessaria para utilizar o assistente")
+    st.markdown("Uma chave de API Groq é necessaria para utilizar o assistente")
     
     groq_api_key = st.text_input(
         "Insert your api Key", 
@@ -41,9 +41,9 @@ with st.sidebar:
 
     st.markdown("---")
 
-st.title("Este assistene te auxilia a obter informação sobre tudo relacionado a Farmacia")
+st.title("Este assistene te auxiliara a obter informação sobre tudo relacionado a Farmacia")
 
-st.title("Juniper Auxilia")
+st.title("Juniper Assistente")
 
 st.caption("Tire Sua Duvida")
 
@@ -69,7 +69,7 @@ if groq_api_key:
 
 
 elif st.session_state.messages:
-     st.warning("Please insert your Groq key")
+     st.warning("Insira sua chave Groq aqui")
 
 
 if prompt := st.chat_input("Pergunte Aqui"):
